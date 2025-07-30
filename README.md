@@ -1,59 +1,58 @@
-# Frontend
+# 🥟 Salgados O Fabuloso — Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.1.
+Este é o front-end do site institucional e sistema de pedidos da marca **Salgados O Fabuloso**, desenvolvido com **Angular** e estilizado com **Tailwind CSS**.
 
-## Development server
+O projeto foi construído com foco em performance, design responsivo e escalabilidade, visando atender tanto clientes finais quanto revendedores.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🔧 Tecnologias
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Angular 20
+- Tailwind CSS (via CDN)
+- TypeScript
+- HTML
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 📸 Páginas implementadas
 
-```bash
-ng generate component component-name
-```
+- Página inicial (Home)
+- Sobre a empresa
+- Lojas
+- Franquia
+- Revenda
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🚀 Como rodar o projeto
 
-## Building
+1. Clone o repositório:
+  - git clone https://github.com/seu-usuario/salgadosofabuloso-frontend.git
 
-To build the project run:
+2. Acesse a pasta do projeto:
+  - cd salgadosofabuloso-frontend
 
-```bash
-ng build
-```
+3. Instale as dependências:
+  - npm install
+    
+4. Inicie o servidor de desenvolvimento:
+  - ng serve
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+5. Acesse no navegador:
+  - http://localhost:4200/
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 💡 Observações
+- Estilização feita exclusivamente com Tailwind CSS via CDN para maior agilidade.
 
-```bash
-ng test
-```
+- Integração futura com backend em Spring Boot (não incluído neste repositório).
 
-## Running end-to-end tests
+- Design adaptado de versão anterior construída em SilverStripe.
 
-For end-to-end (e2e) testing, run:
+## 👨‍💻 Autor
+Rander Carneiro  
+Desenvolvedor Front-end  
 
-```bash
-ng e2e
-```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
