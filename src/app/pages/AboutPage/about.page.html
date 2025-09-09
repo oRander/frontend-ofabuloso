@@ -1,0 +1,199 @@
+<!-- HEADER -->
+<header class="relative h-[700px] md:h-[900px] bg-cover bg-center text-white font-jockey" style="background-image: url('assets/Images/header/banner.png');">
+  <!-- Gradiente branco -->
+  <div class="absolute inset-0 bg-gradient-to-t from-white to-transparent z-10"></div>
+
+  <div class="relative z-20 flex flex-col h-full">
+    <!-- Navbar -->
+    <nav class="relative flex items-center justify-between px-6 py-4">
+      <div class="z-20">
+        <a routerLink="/">
+          <img src="assets/Images/home/logognrade.png" alt="Logo" class="h-16 md:h-20 w-auto">
+        </a>
+      </div>
+
+      <!-- Menu mobile -->
+      <div class="md:hidden z-20">
+        <button (click)="toggleMenu()">
+          <i class="fas fa-bars text-3xl hover:text-yellow-300"></i>
+        </button>
+      </div>
+
+
+      <!-- Menu Desktop -->
+      <ul
+        class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 gap-8 text-[20px] font-light uppercase z-0"
+        style="font-family: 'Jockey One', sans-serif;"
+      >
+        <li><a [routerLink]="'/home'" class="hover:text-yellow-300">Início</a></li>
+        <li><a [routerLink]="'/sobreNos'" class="hover:text-yellow-300">Sobre Nós</a></li>
+        <li><a [routerLink]="'/franquia'" class="hover:text-yellow-300">Franquia</a></li>
+        <li><a [routerLink]="'/lojas'" class="hover:text-yellow-300">Lojas</a></li>
+        <li><a [routerLink]="'/revendas'" class="hover:text-yellow-300">Revendas</a></li>
+      </ul>
+
+      <!-- Área do cliente -->
+      <div class="z-20 flex items-center gap-2" >
+        <a routerLink="/login"style="font-family: 'Jockey One', sans-serif;"  class="bg-white text-[#FFBB00] font-bold px-4 py-2 rounded-md hover:bg-gray-100 uppercase text-sm md:text-base whitespace-nowrap">
+          área do Cliente
+        </a>
+        <i class="fa-solid fa-circle-user text-2xl md:text-4xl hover:text-yellow-300"></i>
+      </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div *ngIf="menuOpen" id="menu-mobile" class="flex flex-col bg-[#FFBB00] text-[#9E0000] font-bold absolute top-20 left-0 w-full text-center py-4 space-y-4 z-30" style="font-family: 'Jockey One', sans-serif;">
+      <a routerLink="/" class="block hover:text-white">Início</a>
+      <a routerLink="/sobreNos" class="block hover:text-white">Sobre Nós</a>
+      <a routerLink="/franquia" class="block hover:text-white">Franquia</a>
+      <a routerLink="/lojas" class="block hover:text-white">Lojas</a>
+      <a routerLink="/revendas" class="block hover:text-white">Revendas</a>
+    </div>
+
+    <!-- Conteúdo central -->
+    <div style="font-family: 'Jockey One', sans-serif;" class="flex-1 flex flex-col items-center justify-center text-center px-4 space-y-6 md:-mt-40 text-black">
+      <h1 class="text-5xl md:text-[88px] font-bold leading-tight uppercase">SOBRE NÓS</h1>
+      <h2 class="text-xl md:text-[25px] font-bold leading-tight tracking-wider">
+        Conheça um pouco da nossa história
+      </h2>
+    </div>
+  </div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('menu-toggle');
+    const menuMobile = document.getElementById('menu-mobile');
+
+    toggleButton?.addEventListener('click', function () {
+      if (menuMobile) {
+        menuMobile.classList.toggle('hidden');
+      }
+    });
+  });
+</script>
+
+<!-- HISTÓRIA -->
+<section class="bg-white text-black px-6 py-16">
+  <div class="max-w-6xl mx-auto space-y-10">
+
+    <div class="text-left font-roboto">
+      <h2 class="text-6xl font-bold uppercase">Sobre Nós</h2>
+      <p class="text-2xl font-semibold mt-1">Descubra a história do O Fabuloso</p>
+    </div>
+
+    <p class="text-xl md:text-2xl leading-relaxed text-justify font-thin">
+      Desde o início, o Fabuloso nasceu de um sonho simples: levar alegria e sabor para dentro dos lares brasileiros. A empresa surgiu em uma pequena cozinha, com receitas caseiras e o desejo de transformar momentos comuns em experiências especiais. Com dedicação e foco na qualidade, conquistamos rapidamente o paladar dos nossos primeiros clientes e, desde então, seguimos crescendo com responsabilidade e carinho em cada detalhe.
+    </p>
+
+    <div class="relative flex flex-col md:flex-row items-start gap-6 mt-10">
+      <div class="md:w-[45%] relative z-0">
+        <img src="assets/Images/about/family.png" alt="Família comendo salgados"
+             class="w-full md:w-[450px] shadow-lg object-cover">
+      </div>
+
+      <div class="w-full md:w-[65%] md:max-w-[720px] bg-[#E20613] text-white
+                  p-6 md:p-8 text-xl md:text-2xl shadow-md rounded-none
+                  static md:absolute md:right-10 md:top-1/2 md:-translate-y-1/2 z-10">
+        <p class="leading-relaxed text-justify font-thin">
+          Nosso propósito vai além de vender salgados — queremos proporcionar praticidade e aconchego para famílias que valorizam o tempo juntas. Cada produto que entregamos carrega o compromisso de facilitar o dia a dia com muito sabor, sem abrir mão da tradição. Acreditamos que comida boa aproxima pessoas, e é isso que buscamos oferecer: mais tempo para aproveitar e menos tempo na cozinha.
+        </p>
+      </div>
+    </div>
+
+    <p class="text-xl md:text-2xl leading-relaxed text-justify font-thin">
+      Para os nossos revendedores, o Fabuloso representa uma oportunidade real de crescimento. Oferecemos não apenas produtos de alta rotatividade, mas também suporte, credibilidade e um portfólio diversificado que atende diferentes públicos e perfis de negócio. Ser nosso parceiro é contar com um sistema eficiente e confiável, pensado para gerar resultados, impulsionando histórias de sucesso por todo o estado de São Paulo.
+    </p>
+
+  </div>
+</section>
+
+<!-- MISSÃO E VALORES -->
+<section class="bg-[#FFBB00] text-white font-roboto px-6 py-16">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+
+    <!-- Título lateral -->
+    <div class="flex flex-col justify-start">
+      <h2 class="text-6xl md:text-7xl font-bold leading-none relative inline-block mb-2">
+        <span class="block border-t-4 border-[#E20613] w-2/3 mb-2"></span>
+        NOSSOS<br>VALORES
+      </h2>
+    </div>
+
+    <!-- Missão e Valores -->
+    <div class="flex flex-col space-y-12">
+      <!-- Missão -->
+      <div>
+        <h3 class="text-5xl md:text-6xl font-bold flex items-center gap-3">
+          <span class="text-6xl font-bold">1</span>
+          <span>MISSÃO</span>
+        </h3>
+        <div class="border-t-4 border-[#E20613] w-full mt-2 mb-4"></div>
+        <p class="text-lg md:text-xl text-white/90 font-light">
+          Contribuir para que famílias e comunidades tenham acesso a alimentos práticos, de qualidade e saborosos. Entregamos mais do que produtos — oferecemos momentos de alegria e união em cada mordida.
+        </p>
+      </div>
+
+      <!-- Valores -->
+      <div>
+        <h3 class="text-5xl md:text-6xl font-bold flex items-center gap-3">
+          <span class="text-6xl font-bold">2</span>
+          <span>VALORES</span>
+        </h3>
+        <div class="border-t-4 border-[#E20613] w-full mt-2 mb-4"></div>
+        <p class="text-lg md:text-xl text-white/90 font-light">
+          Acreditamos na força do sabor como forma de conexão. Atuamos com responsabilidade, respeito, honestidade e paixão pelo que fazemos. Valorizamos nossos clientes, nossos parceiros e todos que compartilham nossa missão de levar o melhor para a mesa dos brasileiros.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="text-white bg-[#9E0000] py-10 text-sm font-normal">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+    <!-- Coluna 1: Endereço -->
+    <div>
+      <p class="font-bold text-[14px] mb-1">CNPJ: 34.700.511/0001-38</p>
+      <p class="font-bold text-[14px] mb-4">Josiel Ludgerio Pinto</p>
+      <p class="leading-snug text-[14px]">
+        Avenida Ampélio Gazzetta, 2122 Sala 3<br />
+        Jardim Bela Vista, Nova Odessa - SP<br />
+        CEP: 13385-019
+      </p>
+      <p class="mt-2 text-[14px]">comercial&#64;salgadosofabuloso.com.br</p>
+
+    </div>
+
+    <!-- Coluna 2: Links -->
+    <div>
+      <p class="font-bold text-[14px] mb-4">Salgados O Fabuloso</p>
+      <div class="flex flex-col gap-2">
+        <a href="/sobreNos" class="hover:text-yellow-400 text-[14px]" target="_blank" rel="noopener noreferrer">Sobre Nós</a>
+        <a href="/contato" class="hover:text-yellow-400 text-[14px]" target="_blank" rel="noopener noreferrer">Contato</a>
+      </div>
+    </div>
+
+    <!-- Coluna 3: Redes Sociais -->
+    <div>
+      <p class="font-bold text-[14px] mb-4">Redes Sociais</p>
+      <div class="flex gap-4 text-xl">
+        <a href="https://www.facebook.com/ofabulosoNO/?locale=pt_BR" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="hover:text-yellow-400">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/ofabuloso.oficial/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hover:text-yellow-400">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/5519988408125" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="hover:text-yellow-400">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Linha separadora -->
+  <div class="bg-[#800000] mt-8 pt-4 text-center text-[12px]">
+    © 2019 - 2025 Salgados o Fabuloso. Todos os direitos reservados.
+  </div>
+</footer>
